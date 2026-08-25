@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "site": {
+    "title": "超能宝宝的小站",
+    "subtitle": "记录技术与生活的小角落",
+    "avatar": "🐣",
+    "signature": "保持热爱，奔赴山海 ✨",
+    "footer": "由 GitHub Pages 强力驱动",
+    "since": 2026,
+    "socials": [
+      { "name": "GitHub", "url": "https://github.com/wanghehebugaoxing" },
+      { "name": "邮箱", "url": "mailto:hi@example.com" }
+    ]
+  },
+  "categories": [
+    { "id": "c1", "name": "前端开发" },
+    { "id": "c2", "name": "生活随笔" },
+    { "id": "c3", "name": "学习笔记" },
+    { "id": "c4", "name": "工具分享" }
+  ],
+  "tags": [
+    { "id": "t1", "name": "Vue3" },
+    { "id": "t2", "name": "JavaScript" },
+    { "id": "t3", "name": "CSS" },
+    { "id": "t4", "name": "GitHub" },
+    { "id": "t5", "name": "Markdown" },
+    { "id": "t6", "name": "随笔" },
+    { "id": "t7", "name": "教程" },
+    { "id": "t8", "name": "效率" }
+  ],
+  "articles": [
+    {
+      "id": "a1",
+      "title": "你好，世界：我的小站上线啦 🎉",
+      "cover": "🎉",
+      "summary": "折腾了几天，终于把属于自己的小角落搭起来了。这里会记录我的技术笔记、生活随笔，欢迎常来坐坐。",
+      "content": "# 你好，世界 👋\n\n折腾了几天，这个小小的网站终于上线了！\n\n## 为什么要有自己的网站\n\n- 记录学习笔记，**输出是最好的输入**\n- 沉淀生活随笔，留住值得纪念的瞬间\n- 折腾本身就是乐趣\n\n## 这个站是怎么搭起来的\n\n1. 页面完全由 HTML / CSS / JavaScript 编写\n2. 数据保存在仓库的 `data.json` 里\n3. 通过 GitHub Pages 免费部署，绑定自己的域名\n\n> 种一棵树最好的时间是十年前，其次是现在。\n\n## 接下来\n\n我会不定期更新文章，内容大概是这些方向：\n\n| 方向 | 说明 |\n| --- | --- |\n| 前端开发 | Vue3、CSS、JavaScript |\n| 学习笔记 | 读书、课程收获 |\n| 工具分享 | 好用的软件和网站 |\n| 生活随笔 | 日常记录 |\n\n欢迎在[留言板](#/messages)留下你的足迹～",
+      "categoryId": "c2",
+      "tagIds": ["t6", "t4"],
+      "views": 328,
+      "published": true,
+      "featured": true,
+      "createdAt": "2026-08-20",
+      "updatedAt": "2026-08-20"
+    },
+    {
+      "id": "a2",
+      "title": "Vue3 组合式 API 入门心得",
+      "cover": "🚀",
+      "summary": "从选项式到组合式，不只是写法的改变，更是组织逻辑方式的进化。聊聊 ref、reactive 和 setup 的使用体会。",
+      "content": "# Vue3 组合式 API 入门\n\n## 为什么喜欢组合式 API\n\n选项式 API（Options API）把代码按 `data`、`methods`、`computed` 切开，一个功能的代码散落各处。组合式 API 让**同一个功能的逻辑聚在一起**。\n\n## 响应式基础\n\n```js\nimport { ref, computed } from 'vue'\n\nconst count = ref(0)\nconst double = computed(() => count.value * 2)\n\nfunction increment() {\n  count.value++\n}\n```\n\n- `ref` 适合基本类型，取值要 `.value`\n- `reactive` 适合对象，但不能整体替换\n- `computed` 自动追踪依赖，惰性求值\n\n## 生命周期\n\n```js\nimport { onMounted, onUnmounted } from 'vue'\n\nonMounted(() => {\n  console.log('组件挂载完成')\n})\n\nonUnmounted(() => {\n  console.log('组件已卸载')\n})\n```\n\n## 组合函数（Composables）\n\n把可复用逻辑抽成函数，是组合式 API 最大的亮点：\n\n```js\n// useMouse.js\nexport function useMouse() {\n  const x = ref(0)\n  const y = ref(0)\n  window.addEventListener('mousemove', e => {\n    x.value = e.pageX\n    y.value = e.pageY\n  })\n  return { x, y }\n}\n```\n\n> 心得：先写组件，等逻辑重复出现时再抽组合函数，不要过度设计。",
+      "categoryId": "c1",
+      "tagIds": ["t1", "t2"],
+      "views": 256,
+      "published": true,
+      "featured": true,
+      "createdAt": "2026-08-18",
+      "updatedAt": "2026-08-18"
+    },
+    {
+      "id": "a3",
+      "title": "CSS 渐变的十种玩法",
+      "cover": "🎨",
+      "summary": "linear-gradient 不只是背景色过渡。从按钮光晕到文字渐变，再到网格图案，十个实用技巧一次讲清。",
+      "content": "# CSS 渐变的十种玩法\n\n## 1. 渐变文字\n\n```css\n.gradient-text {\n  background: linear-gradient(135deg, #6366f1, #ec4899);\n  -webkit-background-clip: text;\n  color: transparent;\n}\n```\n\n## 2. 按钮悬停光晕\n\n```css\n.btn {\n  background: linear-gradient(135deg, #6366f1, #8b5cf6);\n  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);\n  transition: box-shadow .3s;\n}\n.btn:hover {\n  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);\n}\n```\n\n## 3. 网格背景图案\n\n```css\n.grid-bg {\n  background-image:\n    linear-gradient(rgba(99,102,241,.08) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(99,102,241,.08) 1px, transparent 1px);\n  background-size: 24px 24px;\n}\n```\n\n## 4. 圆点纹理\n\n```css\n.dots-bg {\n  background-image: radial-gradient(rgba(99,102,241,.12) 1px, transparent 1px);\n  background-size: 16px 16px;\n}\n```\n\n## 5. 卡片渐变描边\n\n用 `border-image` 或双层背景实现。\n\n## 6. 进度条动画\n\n`background-size` 配合 `@keyframes` 做流光效果。\n\n## 7. 遮罩渐隐\n\n```css\n.fade-mask {\n  mask-image: linear-gradient(to bottom, black 60%, transparent);\n}\n```\n\n## 8. 锥形渐变做色环\n\n`conic-gradient(red, yellow, green, blue, red)` 一行画出调色盘。\n\n## 9. 多层渐变叠加\n\n半透明渐变叠在纯色上，质感立涨。\n\n## 10. 渐变边框头像\n\n> 本站博主头像的渐变圆环就是用 `padding + background-clip` 实现的，快去侧边栏看看～",
+      "categoryId": "c1",
+      "tagIds": ["t3"],
+      "views": 189,
+      "published": true,
+      "featured": false,
+      "createdAt": "2026-08-15",
+      "updatedAt": "2026-08-15"
+    },
+    {
+      "id": "a4",
+      "title": "用 GitHub Pages 免费搭建个人网站",
+      "cover": "🌏",
+      "summary": "零服务器、零费用，把静态网站部署到公网，还能绑定自己的域名。从建仓到 HTTPS 全流程记录。",
+      "content": "# 用 GitHub Pages 免费搭建个人网站\n\n## 为什么选 GitHub Pages\n\n- **免费**：不花一分钱，含 HTTPS\n- **稳定**：背后是 GitHub + Fastly CDN\n- **简单**：推个仓库网站就上线\n\n## 三步上线\n\n### 1. 创建仓库\n\n仓库名任意（Public），比如 `blog`。\n\n### 2. 上传网页文件\n\n仓库页面点 **Add file → Upload files**，拖入 `index.html` 等文件，Commit。\n\n### 3. 开启 Pages\n\n**Settings → Pages**，Source 选 `main` 分支 `/ (root)`，保存。\n\n## 绑定自定义域名\n\n1. 仓库根目录放一个 `CNAME` 文件，内容写你的域名\n2. DNS 添加解析记录：\n\n| 域名类型 | 记录 | 值 |\n| --- | --- | --- |\n| 子域名 | CNAME | `用户名.github.io` |\n| 根域名 | A | `185.199.108.153` 等 4 个 IP |\n\n3. Pages 设置里填 Custom domain，勾选 **Enforce HTTPS**\n\n> 注意：根域名要用 A 记录指向 GitHub 的 4 个 IP；CNAME 只能用于子域名。\n\n## 本站的架构\n\n```\n浏览器 → GitHub Pages（静态文件）\n         ├── index.html   展示端（只读）\n         ├── admin.html   管理端（登录）\n         └── data.json    数据文件\n```\n\n管理端通过 GitHub API 修改 `data.json`，提交后自动触发重新部署，约 1 分钟后全网生效。",
+      "categoryId": "c4",
+      "tagIds": ["t4", "t7"],
+      "views": 412,
+      "published": true,
+      "featured": true,
+      "createdAt": "2026-08-12",
+      "updatedAt": "2026-08-12"
+    },
+    {
+      "id": "a5",
+      "title": "Markdown 写作指南：常用语法速查",
+      "cover": "✍️",
+      "summary": "十分钟掌握 Markdown 核心语法：标题、列表、引用、代码块、表格、链接，写博客必备。",
+      "content": "# Markdown 写作指南\n\n## 标题\n\n```md\n# 一级标题\n## 二级标题\n### 三级标题\n```\n\n## 文本样式\n\n- **粗体**：`**文字**`\n- *斜体*：`*文字*`\n- ~~删除线~~：`~~文字~~`\n- `行内代码`：反引号包裹\n\n## 列表\n\n无序列表：\n\n- 苹果\n- 香蕉\n- 橙子\n\n有序列表：\n\n1. 第一步\n2. 第二步\n3. 第三步\n\n## 引用\n\n> 引用一段话，可以有多行。\n> 这是第二行。\n\n## 代码块\n\n```js\nfunction greet(name) {\n  console.log(`你好，${name}！`)\n}\n```\n\n## 表格\n\n| 语法 | 效果 |\n| --- | --- |\n| `**粗**` | **粗** |\n| `*斜*` | *斜* |\n\n## 链接与图片\n\n```md\n[链接文字](https://example.com)\n![图片描述](图片地址)\n```\n\n> 技巧：先写内容再套格式，专注表达本身。",
+      "categoryId": "c3",
+      "tagIds": ["t5", "t7"],
+      "views": 156,
+      "published": true,
+      "featured": false,
+      "createdAt": "2026-08-10",
+      "updatedAt": "2026-08-10"
+    },
+    {
+      "id": "a6",
+      "title": "我的 2026 学习清单",
+      "cover": "📅",
+      "summary": "给今年定的几个小目标：深入 Vue3 生态、补齐计算机基础、坚持写作输出。立帖为证，年底回来验收。",
+      "content": "# 2026 学习清单\n\n## 技术目标\n\n- [x] 熟练使用 Vue3 组合式 API\n- [ ] 读完《JavaScript 高级程序设计》\n- [ ] 了解 Node.js 后端开发\n- [ ] 每月至少输出 2 篇技术文章\n\n## 习惯目标\n\n- 早睡早起，23:30 前放下手机\n- 每周运动三次\n- 坚持写日记\n\n## 为什么公开目标\n\n> 公开承诺会带来温和的监督感——毕竟立过的 flag，倒了自己都不好意思。\n\n## 进度检查\n\n| 月份 | 计划 | 完成情况 |\n| --- | --- | --- |\n| 1-2 月 | Vue3 基础 | ✅ 完成 |\n| 3-4 月 | CSS 进阶 | ✅ 完成 |\n| 5-6 月 | 工程化 | 🔄 进行中 |\n| 7-12 月 | 后端 + 输出 | ⏳ 待开始 |\n\n年底回来看这条进度表，希望都能打上勾。",
+      "categoryId": "c2",
+      "tagIds": ["t6"],
+      "views": 98,
+      "published": true,
+      "featured": false,
+      "createdAt": "2026-08-08",
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "id": "a7",
+      "title": "JavaScript 防抖与节流：一张图分清",
+      "cover": "⚡",
+      "summary": "防抖是「等你说完我再动」，节流是「固定时间只动一次」。手写实现 + 使用场景对比。",
+      "content": "# 防抖与节流\n\n## 一句话区分\n\n- **防抖（debounce）**：事件停止触发 n 秒后执行——「等你说完我再动」\n- **节流（throttle）**：n 秒内只执行一次——「固定频率地动」\n\n## 手写防抖\n\n```js\nfunction debounce(fn, delay = 300) {\n  let timer = null\n  return function (...args) {\n    clearTimeout(timer)\n    timer = setTimeout(() => fn.apply(this, args), delay)\n  }\n}\n```\n\n## 手写节流\n\n```js\nfunction throttle(fn, interval = 300) {\n  let last = 0\n  return function (...args) {\n    const now = Date.now()\n    if (now - last >= interval) {\n      last = now\n      fn.apply(this, args)\n    }\n  }\n}\n```\n\n## 使用场景\n\n| 场景 | 方案 | 原因 |\n| --- | --- | --- |\n| 搜索框输入联想 | 防抖 | 停止输入再请求 |\n| 按钮防重复提交 | 防抖 | 只响应最后一次 |\n| 滚动加载更多 | 节流 | 高频滚动限流 |\n| 拖拽时计算位置 | 节流 | 保持稳定频率 |\n\n> 记忆口诀：**防抖等静止，节流保频率**。",
+      "categoryId": "c1",
+      "tagIds": ["t2"],
+      "views": 221,
+      "published": true,
+      "featured": false,
+      "createdAt": "2026-08-05",
+      "updatedAt": "2026-08-05"
+    },
+    {
+      "id": "a8",
+      "title": "五个提升效率的浏览器插件（草稿）",
+      "cover": "🧩",
+      "summary": "草稿：打算整理一期浏览器插件推荐，包括标签管理、截图标注、划词翻译等，先列个提纲。",
+      "content": "# 五个提升效率的浏览器插件（提纲）\n\n## 候选清单\n\n1. 标签页管理类\n2. 网页截图 + 标注\n3. 划词翻译\n4. 密码管理\n5. 阅读模式\n\n> 还在整理中，写完再发布。",
+      "categoryId": "c4",
+      "tagIds": ["t8"],
+      "views": 12,
+      "published": false,
+      "featured": false,
+      "createdAt": "2026-08-01",
+      "updatedAt": "2026-08-01"
+    }
+  ],
+  "messages": [
+    {
+      "id": "m1",
+      "name": "路过的小张",
+      "avatar": "👨‍💻",
+      "content": "站点做得不错，界面很清爽，加油更新！",
+      "createdAt": "2026-08-21"
+    },
+    {
+      "id": "m2",
+      "name": "茶茶",
+      "avatar": "🐱",
+      "content": "留言板配色好可爱，蹲一波 CSS 渐变那篇文章的续集～",
+      "createdAt": "2026-08-22"
+    },
+    {
+      "id": "m3",
+      "name": "阿伟",
+      "avatar": "🚴",
+      "content": "照着 GitHub Pages 教程部署成功了，感谢博主！",
+      "createdAt": "2026-08-23"
+    },
+    {
+      "id": "m4",
+      "name": "凌晨四点的键盘",
+      "avatar": "⌨️",
+      "content": "防抖节流那张表一目了然，收藏了。",
+      "createdAt": "2026-08-24"
+    },
+    {
+      "id": "m5",
+      "name": "summer",
+      "avatar": "🌻",
+      "content": "2026 清单一起加油，年底验收！",
+      "createdAt": "2026-08-25"
+    }
+  ]
+}
