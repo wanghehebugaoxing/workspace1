@@ -3,44 +3,16 @@
   "site": {
     "title": "超能宝宝的小站",
     "subtitle": "记录技术与生活的小角落",
-    "avatar": "🐣",
-    "signature": "保持热爱，奔赴山海 ✨",
+    "avatar": "超能宝宝",
+    "signature": "相信记录的力量",
     "footer": "由 GitHub Pages 强力驱动",
     "since": 2026,
     "socials": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/wanghehebugaoxing"
-      },
-      {
-        "name": "邮箱",
-        "url": "mailto:hi@example.com"
-      }
+      { "name": "GitHub", "url": "https://github.com/wanghehebugaoxing" },
+      { "name": "邮箱", "url": "mailto:chaonengbaobao@example.com" }
     ]
   },
   "categories": [],
-  "tags": [
-    {
-      "id": "t4",
-      "name": "GitHub"
-    },
-    {
-      "id": "t5",
-      "name": "Markdown"
-    },
-    {
-      "id": "t6",
-      "name": "随笔"
-    },
-    {
-      "id": "t7",
-      "name": "教程"
-    },
-    {
-      "id": "t8",
-      "name": "效率"
-    }
-  ],
-  "articles": [],
-  "messages": []
+  "tags": [],
+  "articles": []
 }
