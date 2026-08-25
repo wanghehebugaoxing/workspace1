@@ -38,10 +38,6 @@
   ],
   "tags": [
     {
-      "id": "t3",
-      "name": "CSS"
-    },
-    {
       "id": "t4",
       "name": "GitHub"
     },
@@ -101,9 +97,7 @@
       "summary": "linear-gradient 不只是背景色过渡。从按钮光晕到文字渐变，再到网格图案，十个实用技巧一次讲清。",
       "content": "# CSS 渐变的十种玩法\n\n## 1. 渐变文字\n\n```css\n.gradient-text {\n  background: linear-gradient(135deg, #6366f1, #ec4899);\n  -webkit-background-clip: text;\n  color: transparent;\n}\n```\n\n## 2. 按钮悬停光晕\n\n```css\n.btn {\n  background: linear-gradient(135deg, #6366f1, #8b5cf6);\n  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);\n  transition: box-shadow .3s;\n}\n.btn:hover {\n  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);\n}\n```\n\n## 3. 网格背景图案\n\n```css\n.grid-bg {\n  background-image:\n    linear-gradient(rgba(99,102,241,.08) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(99,102,241,.08) 1px, transparent 1px);\n  background-size: 24px 24px;\n}\n```\n\n## 4. 圆点纹理\n\n```css\n.dots-bg {\n  background-image: radial-gradient(rgba(99,102,241,.12) 1px, transparent 1px);\n  background-size: 16px 16px;\n}\n```\n\n## 5. 卡片渐变描边\n\n用 `border-image` 或双层背景实现。\n\n## 6. 进度条动画\n\n`background-size` 配合 `@keyframes` 做流光效果。\n\n## 7. 遮罩渐隐\n\n```css\n.fade-mask {\n  mask-image: linear-gradient(to bottom, black 60%, transparent);\n}\n```\n\n## 8. 锥形渐变做色环\n\n`conic-gradient(red, yellow, green, blue, red)` 一行画出调色盘。\n\n## 9. 多层渐变叠加\n\n半透明渐变叠在纯色上，质感立涨。\n\n## 10. 渐变边框头像\n\n> 本站博主头像的渐变圆环就是用 `padding + background-clip` 实现的，快去侧边栏看看～",
       "categoryId": "c1",
-      "tagIds": [
-        "t3"
-      ],
+      "tagIds": [],
       "views": 189,
       "published": true,
       "featured": false,
