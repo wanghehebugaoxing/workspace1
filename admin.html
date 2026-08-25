@@ -419,27 +419,17 @@ function renderLogin(prefill){
       <div class="login-logo"><span class="badge">🐣</span><div><h1>小站管理后台</h1></div></div>
       <p class="login-sub">登录后可通过 API 管理站点全部数据</p>
       <div class="field"><label>GitHub 用户名 <span class="req">*</span></label>
-        <input id="lgOwner" placeholder="例如 wanghehebugaoxing" value="${esc(prefill&&prefill.owner||'')}" autocomplete="username"></div>
+        <input id="lgOwner" value="${esc(prefill&&prefill.owner||'')}" autocomplete="username"></div>
       <div class="field"><label>仓库名 <span class="req">*</span></label>
-        <input id="lgRepo" placeholder="例如 blog（存放网站的仓库）" value="${esc(prefill&&prefill.repo||'')}" autocomplete="off"></div>
+        <input id="lgRepo" value="${esc(prefill&&prefill.repo||'')}" autocomplete="off"></div>
       <div class="field"><label>访问令牌 Token <span class="req">*</span></label>
-        <div class="pw-wrap"><input id="lgToken" type="password" placeholder="github_pat_… 或 ghp_…" autocomplete="current-password"><button class="eye" id="pwEye" type="button" title="显示/隐藏">👁</button></div>
-        <p class="hint">在 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub 令牌页面</a> 生成（见下方说明）</p></div>
+        <div class="pw-wrap"><input id="lgToken" type="password" autocomplete="current-password"><button class="eye" id="pwEye" type="button" title="显示/隐藏">👁</button></div>
+        <p class="hint">在 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub 令牌页面</a> 生成</p></div>
       <div class="login-row">
         <label><input type="checkbox" id="lgRemember" checked>记住登录状态</label>
         <span style="font-size:12px;color:var(--text-3)">仅本机浏览器保存</span>
       </div>
       <button class="btn btn-primary btn-block" id="lgBtn">登 录</button>
-      <details class="login-help">
-        <summary>❓ 如何生成访问令牌（Fine-grained PAT）</summary>
-        <ol>
-          <li>打开 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Generate new token</a> 页面</li>
-          <li><b>Repository access</b> 选 <code>Only select repositories</code>，勾选存放本站的仓库</li>
-          <li><b>Permissions → Repository permissions → Contents</b> 设为 <code>Read and write</code></li>
-          <li>点 Generate token，复制以 <code>github_pat_</code> 开头的令牌</li>
-        </ol>
-        <p style="margin-top:8px">令牌只授予一个仓库的内容读写权限，退出登录即从本机清除。</p>
-      </details>
     </div>
   </div>`;
   $('#pwEye').addEventListener('click',()=>{
