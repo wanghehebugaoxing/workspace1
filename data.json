@@ -18,12 +18,7 @@
       }
     ]
   },
-  "categories": [
-    {
-      "id": "c1",
-      "name": "前端开发"
-    }
-  ],
+  "categories": [],
   "tags": [
     {
       "id": "t4",
@@ -103,7 +98,7 @@
       "cover": "⚡",
       "summary": "防抖是「等你说完我再动」，节流是「固定时间只动一次」。手写实现 + 使用场景对比。",
       "content": "# 防抖与节流\n\n## 一句话区分\n\n- **防抖（debounce）**：事件停止触发 n 秒后执行——「等你说完我再动」\n- **节流（throttle）**：n 秒内只执行一次——「固定频率地动」\n\n## 手写防抖\n\n```js\nfunction debounce(fn, delay = 300) {\n  let timer = null\n  return function (...args) {\n    clearTimeout(timer)\n    timer = setTimeout(() => fn.apply(this, args), delay)\n  }\n}\n```\n\n## 手写节流\n\n```js\nfunction throttle(fn, interval = 300) {\n  let last = 0\n  return function (...args) {\n    const now = Date.now()\n    if (now - last >= interval) {\n      last = now\n      fn.apply(this, args)\n    }\n  }\n}\n```\n\n## 使用场景\n\n| 场景 | 方案 | 原因 |\n| --- | --- | --- |\n| 搜索框输入联想 | 防抖 | 停止输入再请求 |\n| 按钮防重复提交 | 防抖 | 只响应最后一次 |\n| 滚动加载更多 | 节流 | 高频滚动限流 |\n| 拖拽时计算位置 | 节流 | 保持稳定频率 |\n\n> 记忆口诀：**防抖等静止，节流保频率**。",
-      "categoryId": "c1",
+      "categoryId": "",
       "tagIds": [],
       "views": 221,
       "published": true,
