@@ -105,22 +105,6 @@
       "featured": false,
       "createdAt": "2026-08-05",
       "updatedAt": "2026-08-05"
-    },
-    {
-      "id": "a8",
-      "title": "五个提升效率的浏览器插件（草稿）",
-      "cover": "🧩",
-      "summary": "草稿：打算整理一期浏览器插件推荐，包括标签管理、截图标注、划词翻译等，先列个提纲。",
-      "content": "# 五个提升效率的浏览器插件（提纲）\n\n## 候选清单\n\n1. 标签页管理类\n2. 网页截图 + 标注\n3. 划词翻译\n4. 密码管理\n5. 阅读模式\n\n> 还在整理中，写完再发布。",
-      "categoryId": "",
-      "tagIds": [
-        "t8"
-      ],
-      "views": 12,
-      "published": false,
-      "featured": false,
-      "createdAt": "2026-08-01",
-      "updatedAt": "2026-08-01"
     }
   ],
   "messages": []
