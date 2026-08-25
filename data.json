@@ -204,13 +204,5 @@
       "updatedAt": "2026-08-01"
     }
   ],
-  "messages": [
-    {
-      "id": "m1",
-      "name": "路过的小张",
-      "avatar": "👨‍💻",
-      "content": "站点做得不错，界面很清爽，加油更新！",
-      "createdAt": "2026-08-21"
-    }
-  ]
+  "messages": []
 }
