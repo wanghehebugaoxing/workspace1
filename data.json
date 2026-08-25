@@ -60,20 +60,6 @@
   ],
   "articles": [
     {
-      "id": "a2",
-      "title": "Vue3 组合式 API 入门心得",
-      "cover": "🚀",
-      "summary": "从选项式到组合式，不只是写法的改变，更是组织逻辑方式的进化。聊聊 ref、reactive 和 setup 的使用体会。",
-      "content": "# Vue3 组合式 API 入门\n\n## 为什么喜欢组合式 API\n\n选项式 API（Options API）把代码按 `data`、`methods`、`computed` 切开，一个功能的代码散落各处。组合式 API 让**同一个功能的逻辑聚在一起**。\n\n## 响应式基础\n\n```js\nimport { ref, computed } from 'vue'\n\nconst count = ref(0)\nconst double = computed(() => count.value * 2)\n\nfunction increment() {\n  count.value++\n}\n```\n\n- `ref` 适合基本类型，取值要 `.value`\n- `reactive` 适合对象，但不能整体替换\n- `computed` 自动追踪依赖，惰性求值\n\n## 生命周期\n\n```js\nimport { onMounted, onUnmounted } from 'vue'\n\nonMounted(() => {\n  console.log('组件挂载完成')\n})\n\nonUnmounted(() => {\n  console.log('组件已卸载')\n})\n```\n\n## 组合函数（Composables）\n\n把可复用逻辑抽成函数，是组合式 API 最大的亮点：\n\n```js\n// useMouse.js\nexport function useMouse() {\n  const x = ref(0)\n  const y = ref(0)\n  window.addEventListener('mousemove', e => {\n    x.value = e.pageX\n    y.value = e.pageY\n  })\n  return { x, y }\n}\n```\n\n> 心得：先写组件，等逻辑重复出现时再抽组合函数，不要过度设计。",
-      "categoryId": "c1",
-      "tagIds": [],
-      "views": 256,
-      "published": true,
-      "featured": true,
-      "createdAt": "2026-08-18",
-      "updatedAt": "2026-08-18"
-    },
-    {
       "id": "a3",
       "title": "CSS 渐变的十种玩法",
       "cover": "🎨",
