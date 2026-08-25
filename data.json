@@ -43,23 +43,6 @@
   ],
   "articles": [
     {
-      "id": "a4",
-      "title": "用 GitHub Pages 免费搭建个人网站",
-      "cover": "🌏",
-      "summary": "零服务器、零费用，把静态网站部署到公网，还能绑定自己的域名。从建仓到 HTTPS 全流程记录。",
-      "content": "# 用 GitHub Pages 免费搭建个人网站\n\n## 为什么选 GitHub Pages\n\n- **免费**：不花一分钱，含 HTTPS\n- **稳定**：背后是 GitHub + Fastly CDN\n- **简单**：推个仓库网站就上线\n\n## 三步上线\n\n### 1. 创建仓库\n\n仓库名任意（Public），比如 `blog`。\n\n### 2. 上传网页文件\n\n仓库页面点 **Add file → Upload files**，拖入 `index.html` 等文件，Commit。\n\n### 3. 开启 Pages\n\n**Settings → Pages**，Source 选 `main` 分支 `/ (root)`，保存。\n\n## 绑定自定义域名\n\n1. 仓库根目录放一个 `CNAME` 文件，内容写你的域名\n2. DNS 添加解析记录：\n\n| 域名类型 | 记录 | 值 |\n| --- | --- | --- |\n| 子域名 | CNAME | `用户名.github.io` |\n| 根域名 | A | `185.199.108.153` 等 4 个 IP |\n\n3. Pages 设置里填 Custom domain，勾选 **Enforce HTTPS**\n\n> 注意：根域名要用 A 记录指向 GitHub 的 4 个 IP；CNAME 只能用于子域名。\n\n## 本站的架构\n\n```\n浏览器 → GitHub Pages（静态文件）\n         ├── index.html   展示端（只读）\n         ├── admin.html   管理端（登录）\n         └── data.json    数据文件\n```\n\n管理端通过 GitHub API 修改 `data.json`，提交后自动触发重新部署，约 1 分钟后全网生效。",
-      "categoryId": "",
-      "tagIds": [
-        "t4",
-        "t7"
-      ],
-      "views": 412,
-      "published": true,
-      "featured": true,
-      "createdAt": "2026-08-12",
-      "updatedAt": "2026-08-12"
-    },
-    {
       "id": "a5",
       "title": "Markdown 写作指南：常用语法速查",
       "cover": "✍️",
