@@ -8,11 +8,32 @@
     "footer": "由 GitHub Pages 强力驱动",
     "since": 2026,
     "socials": [
-      { "name": "GitHub", "url": "https://github.com/wanghehebugaoxing" },
-      { "name": "邮箱", "url": "mailto:chaonengbaobao@example.com" }
+      {
+        "name": "GitHub",
+        "url": "https://github.com/wanghehebugaoxing"
+      },
+      {
+        "name": "邮箱",
+        "url": "mailto:chaonengbaobao@example.com"
+      }
     ]
   },
   "categories": [],
   "tags": [],
-  "articles": []
+  "articles": [
+    {
+      "id": "amt9n0wubexriy",
+      "title": "启航",
+      "cover": "🎉",
+      "summary": "",
+      "content": "## **梦在启航**\n",
+      "categoryId": "",
+      "tagIds": [],
+      "views": 0,
+      "published": true,
+      "featured": false,
+      "createdAt": "2026-08-26",
+      "updatedAt": "2026-08-26"
+    }
+  ]
 }
